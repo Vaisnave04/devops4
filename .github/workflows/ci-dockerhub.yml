@@ -32,7 +32,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v5
       with:
-        images: ${{ secrets.VAISNAVE }}/python-ci-lab
+        images: ${{ secrets.vaisnave }}/python-ci-lab
         tags: |
           type=raw,value=latest,enable={{is_default_branch}}
           type=sha,prefix=sha-,format=short
@@ -47,8 +47,8 @@ jobs:
     - name: Login to Docker Hub
       uses: docker/login-action@v3
       with:
-        username: ${{ secrets.VAISNAVE }}
-        password: ${{ secrets.dckr_pat_3IoY4F-2GwFsxPO81bP8cZ_AEFo }}
+        username: ${{ secrets.vaisnave }}
+        password: ${{ secrets.dckr_pat_faXMVoNSsxZ4TS3REQB952bQemI }}
 
     - name: Build and push
       uses: docker/build-push-action@v6
