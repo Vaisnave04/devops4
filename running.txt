@@ -4,3 +4,4 @@ python -m pytest -q
 docker build -t vaisnave/python-ci-lab:local .
 docker run --rm vaisnave/python-ci-lab:local
   
+  
